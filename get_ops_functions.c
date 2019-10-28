@@ -1,6 +1,7 @@
 /* include header */
 #include <stdarg.h>
 #include <stdio.h>
+#include <stdlib.h>
 #include "holerton.h"
 
 int (*get_ops_function(char s))(va_list ap)
@@ -10,25 +11,14 @@ int (*get_ops_function(char s))(va_list ap)
     d_dt data_types[] = {
         {"c", print_char},
        /* {"s", print_string},*/
-        {NULL, NULL}
     };
 
-    while (i < 3)
+    while (i < 1)
     {
         if (s == *data_types[i].type)
            return (data_types[i].f);
+	else
+		exit(-1);
        i++;
     }
-}
-
-int print_char(va_list ap)
-{
-	printf("hola");
-    return(1);
-}
-
-int main ()
-{
-    _printf("%c");
-    return(0);
 }
