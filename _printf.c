@@ -17,10 +17,16 @@ int _printf(const char *format, ...)
        {
 	       while (format[i + 1] == ' ' || format[i + 1] == 9)
 		       i++;
-
-	       execute = get_ops_function(format[i + 1]);
-	       byte = byte + execute(ap);
-	       i++;
+	       if (format[i + 1])
+	       {
+		       execute = get_ops_function(format[i + 1]);
+		       byte = byte + execute(ap);
+		       i++;
+	       }
+	       else
+	       {
+		       return (-1);
+	       }
        }
        else
        {
