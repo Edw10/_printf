@@ -19,13 +19,13 @@ int prt_chr(va_list ap)
 int prt_str(va_list ap)
 {
 	char *p;
-	int byte = 0;
+	int byte = 0, i = 0;
 
 	p = va_arg(ap, char *);
 
 	while (*p)
 	{
-		write(1, &p, 1);
+		write(1, p, 1);
 		p++;
 		byte++;
 	}
