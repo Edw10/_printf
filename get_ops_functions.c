@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <unistd.h>
 #include "holberton.h"
 
 int (*get_ops_function(char s))(va_list ap)
@@ -20,5 +21,7 @@ int (*get_ops_function(char s))(va_list ap)
            return (data_types[i].f);
        i++;
     }
-    exit(-1);
+    write(1, "%", 1);
+    write(1, &s, 1);
+    return (prt_ukn);
 }

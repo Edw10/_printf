@@ -35,10 +35,19 @@ int prt_str(va_list ap)
 
 int prt_pct(va_list ap)
 {
+
 	int byte = 0;
 
 	write(1, "%", 1);
 	byte++;
+	(void) ap;
+	return (byte);
+}
+
+
+int prt_ukn(va_list ap)
+{
+	int byte = 2;
 	(void) ap;
 
 	return (byte);
