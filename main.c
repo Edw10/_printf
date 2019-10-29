@@ -7,8 +7,8 @@ int main()
 	char *s = "to";
 	int p = 0;
 
-	_printf("hola jose %\tc como estas, %s \n", c, s);
-	p = printf("hola jose %s como estas, %c \n", s, c);
+	_printf("hola jose %%%c como estas, %s \n", c, s);
+	p = _printf("hola jose %%s como estas, %c \n", c);
 	printf("%d\n", p);
 
 }
