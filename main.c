@@ -5,10 +5,12 @@ int main()
 {
 	char c = 'a';
 	char *s = "to";
-	int p = 0;
+	int p = 0, q = 0;
 
-	_printf("hola jose %%%c como estas, %s \n", c, s);
-	p = _printf("hola jose %%s como estas, %c \n", c);
+	printf("hola jose %%%c como estas, %s \n", c, s);
+	p = _printf("hola jose %%to como estas, %c \n", c);
 	printf("%d\n", p);
+	q = printf("hola jose %%to como estas, %c \n", c);
+	printf("%d\n", q);
 
 }
