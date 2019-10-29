@@ -7,15 +7,15 @@
 
 int (*get_ops_function(char s))(va_list ap)
 {
-    int i = 0;
+	int i = 0;
 
     d_dt data_types[] = {
         {"c", prt_chr},
         {"s", prt_str},
-	{"%", prt_pct}
+	{"%", prt_pct},
     };
 
-    while (i < 3)
+    while (i < 4)
     {
         if (s == *data_types[i].type)
            return (data_types[i].f);

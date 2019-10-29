@@ -9,6 +9,7 @@ int prt_chr(va_list ap);
 int prt_str(va_list ap);
 int prt_pct(va_list ap);
 int prt_ukn(va_list ap);
+int prt_nil(va_list ap);
 
 typedef struct data
 {

@@ -23,15 +23,24 @@ int prt_str(va_list ap)
 	int byte = 0;
 
 	p = va_arg(ap, char *);
-
-	while (*p)
+	if (p)
 	{
-		write(1, p, 1);
-		p++;
-		byte++;
+		while (*p)
+		{
+			write(1, p, 1);
+			p++;
+			byte++;
+		}
 	}
+	else
+	{
+		write(1, "(null)", 6);
+		byte = 6;
+	}
+
 	return (byte);
 }
+
 
 int prt_pct(va_list ap)
 {
@@ -49,6 +58,13 @@ int prt_ukn(va_list ap)
 {
 	int byte = 2;
 	(void) ap;
+	return (byte);
+}
 
+int prt_nil(va_list ap)
+{
+	int byte = 6;
+	(void) ap;
+	write(1, "(null)", 6);
 	return (byte);
 }
