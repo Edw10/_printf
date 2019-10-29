@@ -12,5 +12,5 @@ int main()
 	printf("%d\n", p);
 	q = printf("hola jose %%to como estas, %c \n", c);
 	printf("%d\n", q);
-
+	return (0);
 }
