@@ -15,15 +15,7 @@ int prt_chr(va_list ap)
 
 	p = (char) va_arg(ap, int);
 
-	if (p)
-	{
-		write(1, &p, 1);
-	}
-	else if (p == '\0')
-	{
-		write(1, "\0", 1);
-
-	}
+	write(1, &p, 1);
 	return (byte);
 }
 
