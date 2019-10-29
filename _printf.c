@@ -14,6 +14,9 @@ int _printf(const char *format, ...)
     {
        if (format[i] == '%')
        {
+	       while (format[i + 1] == ' ' || format[i + 1] == 9)
+		       i++;
+
 	       execute = get_ops_function(format[i + 1]);
 	       byte = byte + execute(ap);
 	       i++;
