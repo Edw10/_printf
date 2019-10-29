@@ -2,6 +2,12 @@
 #include <stdio.h>
 #include <unistd.h>
 
+/**
+ * prt_chr - print  character
+ * @ap: list of characts
+ *
+ * Return: nmber of bytes
+ */
 int prt_chr(va_list ap)
 {
 	char p;
@@ -21,6 +27,12 @@ int prt_chr(va_list ap)
 	return (byte);
 }
 
+/**
+ * prt_str - prints a string
+ * @ap: string char by char
+ *
+ * Return: bytes total
+ */
 int prt_str(va_list ap)
 {
 	char *p;
@@ -46,7 +58,12 @@ int prt_str(va_list ap)
 	return (byte);
 }
 
-
+/**
+ * prt_pct - prints a % sign
+ * @ap: string char by char
+ *
+ * Return: bytes total
+ */
 int prt_pct(va_list ap)
 {
 
@@ -58,7 +75,12 @@ int prt_pct(va_list ap)
 	return (byte);
 }
 
-
+/**
+ * prt_ukn - prints an unnonewd type
+ * @ap: string char by char
+ *
+ * Return: bytes total
+ */
 int prt_ukn(va_list ap)
 {
 	int byte = 2;
@@ -66,6 +88,12 @@ int prt_ukn(va_list ap)
 	return (byte);
 }
 
+/**
+ * prt_nil - prints a null message
+ * @ap: string char by char
+ *
+ * Return: bytes total
+ */
 int prt_nil(va_list ap)
 {
 	int byte = 6;
