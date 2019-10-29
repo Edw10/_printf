@@ -14,6 +14,10 @@ int prt_chr(va_list ap)
 		write(1, &p, 1);
 		byte++;
 	}
+	else
+	{
+		byte++;
+	}
 	return (byte);
 }
 
