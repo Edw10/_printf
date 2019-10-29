@@ -19,7 +19,7 @@ int prt_chr(va_list ap)
 int prt_str(va_list ap)
 {
 	char *p;
-	int byte = 0, i = 0;
+	int byte = 0;
 
 	p = va_arg(ap, char *);
 
@@ -34,11 +34,11 @@ int prt_str(va_list ap)
 
 int prt_pct(va_list ap)
 {
-
 	int byte = 0;
 
 	write(1, "%", 1);
 	byte++;
+	(void) ap;
 
 	return (byte);
 }
