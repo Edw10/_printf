@@ -21,7 +21,7 @@ int prt_chr(va_list ap)
 	}
 	else if (p == '\0')
 	{
-		write(1, " ", 1);
+		write(1, "\0", 1);
 
 	}
 	return (byte);
