@@ -9,11 +9,11 @@ int (*get_ops_function(char s))(va_list ap)
     int i = 0;
 
     d_dt data_types[] = {
-        {"c", prt_str},
-       /* {"s", print_string},*/
+        {"c", prt_chr},
+        {"s", prt_str}
     };
 
-    while (i < 1)
+    while (i < 2)
     {
         if (s == *data_types[i].type)
            return (data_types[i].f);
