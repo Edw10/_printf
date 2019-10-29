@@ -7,6 +7,7 @@ int _printf(const char *format, ...);
 int (*get_ops_function(char s))(va_list ap);
 int  prt_str(va_list ap);
 
+
 typedef struct data
 {
         char *type;
