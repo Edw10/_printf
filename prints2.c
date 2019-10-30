@@ -3,12 +3,11 @@
 #include <unistd.h>
 
 /**
- * prt_chr - print  character
+ * prt_int - print character
  * @ap: list of characts
  *
  * Return: nmber of bytes
  */
-int _printd(unsigned int p);
 
 int prt_int(va_list ap)
 {
@@ -28,26 +27,30 @@ int prt_int(va_list ap)
 	return (byte);
 }
 
+/**
+ * _printd - print  character
+ * @p: list of characts
+ *
+ * Return: nmber of bytes
+ */
+
+
+int _printd(unsigned int p);
+
+
 int _printd(unsigned int p)
 {
 	int a = 48, byte = 0;
 
 	if (p / 10 == 0)
 	{
-		/* if (p < 0) */
-		/* 	a = -p + a; */
-		/* else */
 		a = p + a;
-		write(1 , &a, 1);
+		write(1, &a, 1);
 		return (1);
 	}
 
 	byte = 1 + _printd(p / 10);
-	/* if (p < 0) */
-	/* 	a =(-p % 10) + a; */
-	/* else */
-	a =(p % 10) + a;
-
+	a = (p % 10) + a;
 	write(1, &a, 1);
 	return (byte);
 }
