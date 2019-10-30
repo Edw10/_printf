@@ -1,10 +1,10 @@
 # Printf
 ##
 ### Description
-Program that prints differents types datas based on formats
+Program that prints differents types datas based on formats based on the PRINTF prject for the holerton school program
 ### Mandatory Tasks
 | File | Description |
-| ------ | ------ |
+| | |
 | holberton.h | Program  Header file |
 | ------ | ------ |
 | printf.c | Script to call property function for the data type |
@@ -22,5 +22,6 @@ Program that prints differents types datas based on formats
 | ------ | ------ |
 | []() |  |
 ## Author
+### Edward Osorno | Evert Escalante Cohort 10. Medellin
 []()
 
