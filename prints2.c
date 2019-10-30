@@ -20,6 +20,7 @@ int prt_int(va_list ap)
 	if (p < 0)
 	{
 		write(1, "-", 1);
+		p = -p;
 		byte++;
 	}
 	byte = byte + _printd(p);
@@ -36,7 +37,7 @@ int _printd(unsigned int p)
 		/* if (p < 0) */
 		/* 	a = -p + a; */
 		/* else */
-			a = p + a;
+		a = p + a;
 		write(1 , &a, 1);
 		return (1);
 	}
@@ -45,7 +46,7 @@ int _printd(unsigned int p)
 	/* if (p < 0) */
 	/* 	a =(-p % 10) + a; */
 	/* else */
-		a =(p % 10) + a;
+	a =(p % 10) + a;
 
 	write(1, &a, 1);
 	return (byte);
