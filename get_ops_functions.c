@@ -23,7 +23,7 @@ int (*get_ops_function(char s))(va_list ap)
 		{"b", prt_bin}
 	};
 
-	while (i < 5)
+	while (i < 6)
 	{
 		if (s == *data_types[i].type)
 			return (data_types[i].f);

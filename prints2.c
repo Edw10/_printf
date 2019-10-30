@@ -64,7 +64,8 @@ int prt_bin(va_list ap)
 {
 	unsigned int p;
 	int byte = 0;
-	int a = 0;
+	int a[8] = {0, 0, 0, 0, 0, 0, 0, 0};
+	int i = 0;
 
 	p = va_arg(ap, size_t);
 	if (!p)
@@ -72,10 +73,13 @@ int prt_bin(va_list ap)
 
 	while (p)
 	{
-		a = (p % 2) + 48;
-		write(1, &a, 1);
+		a[i] = (p % 2) + 48;
 		byte++;
 		p = p / 2;
+		i++;
 	}
+	for (i = 7; i >= 0; i--)
+		write(1, &a[i], 1);
+
 	return (byte);
 }
