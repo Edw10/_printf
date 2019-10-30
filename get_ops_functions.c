@@ -13,7 +13,8 @@ int (*get_ops_function(char s))(va_list ap)
         {"c", prt_chr},
         {"s", prt_str},
 	{"%", prt_pct},
-	{"d", prt_int}
+	{"d", prt_int},
+  	{"i", prt_int}
     };
 
     while (i < 4)
