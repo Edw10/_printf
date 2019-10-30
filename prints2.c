@@ -8,7 +8,7 @@
  *
  * Return: nmber of bytes
  */
-int _printd(int p);
+int _printd(unsigned int p);
 
 int prt_int(va_list ap)
 {
@@ -27,19 +27,26 @@ int prt_int(va_list ap)
 	return (byte);
 }
 
-int _printd(int p)
+int _printd(unsigned int p)
 {
 	int a = 48, byte = 0;
 
 	if (p / 10 == 0)
 	{
-		a = p + a;
+		/* if (p < 0) */
+		/* 	a = -p + a; */
+		/* else */
+			a = p + a;
 		write(1 , &a, 1);
 		return (1);
 	}
 
 	byte = 1 + _printd(p / 10);
-	a = (p % 10) + a;
+	/* if (p < 0) */
+	/* 	a =(-p % 10) + a; */
+	/* else */
+		a =(p % 10) + a;
+
 	write(1, &a, 1);
 	return (byte);
 }
