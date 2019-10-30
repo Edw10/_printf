@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 #include <stdarg.h>
 #include <stdio.h>
 #include "holberton.h"
@@ -49,5 +48,3 @@ int _printf(const char *format, ...)
 	va_end(ap);
 	return (byte);
 }
-=======
->>>>>>> 16fa8143ff3574ddeced3caed33588f1a9ec1279
