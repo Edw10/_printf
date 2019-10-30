@@ -51,3 +51,31 @@ int _printd(unsigned int p)
 	write(1, &a, 1);
 	return (byte);
 }
+
+/**
+ * prt_bin - print character
+ * @ap: list of characts
+ *
+ * Return: nmber of bytes
+ */
+
+
+int prt_bin(va_list ap)
+{
+	unsigned int p;
+	int byte = 0;
+	int a = 0;
+
+	p = va_arg(ap, size_t);
+	if (!p)
+		byte++;
+
+	while (p)
+	{
+		a = (p % 2) + 48;
+		write(1, &a, 1);
+		byte++;
+		p = p / 2;
+	}
+	return (byte);
+}

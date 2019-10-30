@@ -19,7 +19,8 @@ int (*get_ops_function(char s))(va_list ap)
 		{"s", prt_str},
 		{"%", prt_pct},
 		{"d", prt_int},
-		{"i", prt_int}
+		{"i", prt_int},
+		{"b", prt_bin}
 	};
 
 	while (i < 5)
