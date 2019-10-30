@@ -35,9 +35,6 @@ int prt_int(va_list ap)
  */
 
 
-int _printd(unsigned int p);
-
-
 int _printd(unsigned int p)
 {
 	int a = 48, byte = 0;
