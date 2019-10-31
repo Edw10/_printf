@@ -59,7 +59,7 @@ int _printd(unsigned int p)
  * Return: nmber of bytes
  */
 
-
+/*
 int prt_bin(va_list ap)
 {
 	unsigned int p;
@@ -82,4 +82,4 @@ int prt_bin(va_list ap)
 		write(1, &a[i], 1);
 
 	return (byte);
-}
+}*/
