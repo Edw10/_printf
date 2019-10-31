@@ -6,7 +6,7 @@ int prt_bin(va_list ap)
 {
 	int byte = 0;
 	int a[20];
-	unsigned int  p;
+	long int  p;
 	int i = 0, j = 0;
 	
 	p = va_arg(ap, size_t);
