@@ -1,18 +1,14 @@
-#ifndef _HOLBERTON_H_
-#define _HOLBERTON_H_
+#ifndef _PRINTF_H
+#define _PRINTF_H
+
 #include <stdarg.h>
 
-int _putchar(int c);
 int _printf(const char *format, ...);
-int (*get_ops_function(char s))(va_list ap);
-int prt_chr(va_list ap);
-int prt_str(va_list ap);
-int prt_pct(va_list ap);
-int prt_ukn(va_list ap);
-int prt_nil(va_list ap);
-int prt_int(va_list ap);
-int prt_bin(va_list ap);
-int _printd(unsigned int p);
+int (*get_ops_function(char s))(va_list arg_list);
+int print_char(va_list arg_list);
+int print_string(va_list arg_list);
+int print_unknow_type(va_list arg_list);
+int print_percent(va_list arg_list);
 
 /**
  * struct data - contains data in two columns
@@ -21,9 +17,9 @@ int _printd(unsigned int p);
  *
  * Description: contains data in two columns
  */
-typedef struct data
+typedef struct print_f
 {
 	char *type;
-	int (*f)(va_list ap);
-} d_dt;
-#endif /* _HOLBERTON_H_ */
+	int (*f)(va_list arg_list);
+} _print_f;
+#endif /* _PRINTF_H */
